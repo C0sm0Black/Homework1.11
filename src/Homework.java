@@ -29,10 +29,35 @@ public class Homework {
 
     }
 
+    private static void deliveryCheck(int deliveryDistance) {
+
+        if (deliveryDistance < 20) {
+            System.out.println("Для доставки потребуется дней: 1");
+        } else if (deliveryDistance >= 20 && deliveryDistance <= 60) {
+            System.out.println("Для доставки потребуется дней: 2");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Для доставки потребуется дней: 3");
+        } else if (deliveryDistance > 100) {
+            System.out.println("Доставки нет");
+        }
+
+    }
+
+
     public static void main(String[] args) {
 
         task1();
         task2();
+        task3();
+
+    }
+
+    private static void task3() {
+
+        System.out.println("Задача 3");
+
+        int deliveryDistance = 95;
+        deliveryCheck(deliveryDistance);
 
     }
 
